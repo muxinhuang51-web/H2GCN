@@ -20,7 +20,10 @@ import numpy as np
 import pickle as pkl
 import networkx as nx
 import scipy.sparse as sp
-from scipy.sparse.linalg.eigen.arpack import eigsh
+try:
+    from scipy.sparse.linalg.eigen.arpack import eigsh
+except ModuleNotFoundError:
+    from scipy.sparse.linalg import eigsh
 import sys
 import multiprocessing
 from itertools import chain
@@ -769,5 +772,4 @@ def chebyshev_polynomials(adj, k, eigenvalue=None, asspmat=False):
         return t_k
     else:
         return sparse_to_tuple(t_k)
-
 
