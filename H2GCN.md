@@ -12,8 +12,13 @@
 3. 结合不同的中间层的输出，最后使用combine合并自己和每一轮邻居，拼接后线性变换加非线性变换
 
 ## 实验
+1. 使用官方 `syn-cora` npz 数据。
+2. 在原 `h2gcn/run_experiments.py` 入口上读取 npz 数据。
+3. 对比低/中/高同质性图上的 H2GCN-1 和 H2GCN-2 表现。
+4. 观察模型在不同 homophily 水平下的趋势。
 
 ## 总结：
+同时在同质性和异质性中学习的模型
 
 
 ## 后续：https://www.jiongzhu.net/revisiting-heterophily-GNNs/

@@ -104,3 +104,6 @@ venv.bak/
 
 .vscode/
 npz-datasets/syn-products-npz.tar.gz
+my code/checkpoints*/
+my code/full-rerun-checkpoints/
+my code/full-rerun-logs/
